@@ -1,0 +1,65 @@
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    color: $blue;
+    .portrait{
+	    margin: 0 auto;
+	    border-radius: 50%;
+	    margin-bottom: 30px;
+    }
+    p {
+        font-family: 'Raleway Bold';
+	    font-size: 2em;
+        text-align: center;
+        margin: 0px 40px;
+        line-height: 35px;
+    }
+    @media only screen and (min-width: 780px) {
+        width: 50%; padding-top: 20px;
+        p{
+            width: 90%
+        }
+    }
+}
+
+.aboutInfo {
+    border:  2px solid $pink;
+    padding: 30px; 
+    margin: 20px 40px 0px 40px;
+    .tools
+    {   
+	    display: flex; flex-direction: column;
+        text-align: center; margin-bottom: 20px;
+        .toolName{
+            font-family: 'Mohave Bold';
+	        font-size: 1.2em; color: #262687;
+        }
+    }
+    .divider
+    {
+        width: 100px;
+        height: 5px;
+        background-color: #FA82AA;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .resume{
+        font-family: 'Mohave Bold';
+        font-size: 1.2em; color: #262687;
+        text-align: center;
+        #resumeLink{
+            font-size: 16px; font-family: 'Raleway Bold'; 
+            color: #FA82AA;
+        }
+        #resumeLink:hover {color:$blue;}
+        #resumeLink:active {color: blue;}
+    }
+
+    .note{
+        text-align: center;
+        margin-top: 20px;
+    }
+    @media only screen and (min-width: 780px) {
+        width: 50%;
+    }
+}

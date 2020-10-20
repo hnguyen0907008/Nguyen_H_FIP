@@ -1,0 +1,47 @@
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(38,38,135);
+    background: linear-gradient(90deg, rgba(38,38,135,1) 0%, rgba(250,130,170,1) 100%);
+    padding: 20px 0px;
+    margin-top: 30px;
+    .footerLogo{
+        margin: 0 auto;
+    }
+    #footerLogo{
+        width: 80px;
+        margin: 0 auto;
+    }
+}
+
+#socialMedia{
+    ul {
+        list-style-type: none;
+    
+        li {
+            display: inline-block;
+            background-color: white;
+            @include roundCorners(6px);
+            padding-top: 3px;
+            img { width: 40px; }
+            //gmail
+        }
+    }
+
+    margin: 0 auto;
+}
+
+#backtoTop
+{   
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 5px 10px;
+    color: $blue;
+    background-color: white;
+    text-decoration: none;
+    font-family: 'Mohave Bold';
+    font-size: 1.3em;
+    @include roundCorners(6px);
+}
+
