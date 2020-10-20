@@ -1,0 +1,451 @@
+/*fonts*/
+@font-face {
+  font-family: 'Raleway Light';
+  src: url("Raleway-Light.woff2") format("woff2"), url("Raleway-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url("Raleway-Bold.woff2") format("woff2"), url("Raleway-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Mohave Bold';
+  src: url("Mohave-Bold.woff2") format("woff2"), url("Mohave-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Mohave Light';
+  src: url("Mohave-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url("Baskervville-Italic.woff2") format("woff2"), url("Baskervville-Italic.woff") format("woff");
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  font-family: 'Raleway Light';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+}
+
+main header #mainLogo {
+  width: 80px;
+  margin-top: 15px;
+}
+
+main .hello {
+  height: 400px;
+  margin-bottom: 30px;
+  background: url("../images/pattern.png") no-repeat center;
+}
+
+main .hello h2, main .hello p {
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+main .hello h2 {
+  margin-bottom: 20px;
+  font-size: 4em;
+  margin-top: 100px;
+  font-family: 'Mohave Bold';
+  margin-bottom: 40px;
+}
+
+main .hello p {
+  padding-right: 30%;
+  padding-left: 30%;
+  font-size: 1.2em;
+  line-height: 26px;
+}
+
+main .recentWork {
+  width: 100%;
+}
+
+main .recentWork h2 {
+  font-family: 'Raleway Bold';
+  font-size: 1.7em;
+  color: #262687;
+  text-align: center;
+}
+
+@media only screen and (min-width: 780px) {
+  main .recentWork {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+main .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 780px) {
+  main .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 1200px;
+  }
+}
+
+main .pageTitle {
+  background: url("../images/pattern.png") no-repeat center;
+  padding: 30px 0px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+main .pageTitle h2 {
+  font-family: 'Raleway Bold';
+  font-size: 2em;
+}
+
+main .pageTitle h3 {
+  font-family: 'Mohave Light';
+  margin-top: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.workDiv {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 780px) {
+  .workDiv {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+.workDiv .work {
+  width: 360px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.workDiv .work h3 {
+  font-family: 'Raleway Bold';
+  font-size: 1.5em;
+  margin: 15px 0px 10px;
+}
+
+.workDiv .work h4 {
+  font-family: 'Mohave Light';
+  margin-top: 15px;
+}
+
+.workDiv .work:hover {
+  border: 3px solid #fa82aa;
+}
+
+.workDiv .work:hover h3, .workDiv .work:hover h4 {
+  color: #fa82aa;
+}
+
+#mainNav {
+  margin-top: 30px;
+}
+
+#mainNav a {
+  color: #262687;
+  font-family: 'Raleway Bold';
+  font-size: 1.2em;
+  text-decoration: none;
+  margin-right: 20px;
+  padding-bottom: 8px;
+}
+
+#mainNav a:hover {
+  color: #fa82aa;
+  border-bottom: 3px solid #fa82aa;
+}
+
+.aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #262687;
+}
+
+.aboutMe .portrait {
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.aboutMe p {
+  font-family: 'Raleway Bold';
+  font-size: 2em;
+  text-align: center;
+  margin: 0px 40px;
+  line-height: 35px;
+}
+
+@media only screen and (min-width: 780px) {
+  .aboutMe {
+    width: 50%;
+    padding-top: 20px;
+  }
+  .aboutMe p {
+    width: 90%;
+  }
+}
+
+.aboutInfo {
+  border: 2px solid #fa82aa;
+  padding: 30px;
+  margin: 20px 40px 0px 40px;
+}
+
+.aboutInfo .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.aboutInfo .tools .toolName {
+  font-family: 'Mohave Bold';
+  font-size: 1.2em;
+  color: #262687;
+}
+
+.aboutInfo .divider {
+  width: 100px;
+  height: 5px;
+  background-color: #FA82AA;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.aboutInfo .resume {
+  font-family: 'Mohave Bold';
+  font-size: 1.2em;
+  color: #262687;
+  text-align: center;
+}
+
+.aboutInfo .resume #resumeLink {
+  font-size: 16px;
+  font-family: 'Raleway Bold';
+  color: #FA82AA;
+}
+
+.aboutInfo .resume #resumeLink:hover {
+  color: #262687;
+}
+
+.aboutInfo .resume #resumeLink:active {
+  color: blue;
+}
+
+.aboutInfo .note {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 780px) {
+  .aboutInfo {
+    width: 50%;
+  }
+}
+
+.pjDetails {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 20px;
+}
+
+.pjDetails .pjModules {
+  margin: 20px 0px;
+}
+
+.pjDetails .pjModules h3 {
+  font-family: 'Raleway Bold';
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.pjDetails .pjModules .subModule {
+  margin-bottom: 20px;
+}
+
+.pjDetails .pjModules .subModule h4 {
+  font-family: 'Mohave Bold';
+  color: #262687;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 780px) {
+  .pjDetails {
+    width: 1200px;
+  }
+}
+
+.gallery {
+  background-color: grey;
+  padding: 20px;
+}
+
+.gallery .thumbnail {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.gallery .thumbnail .imgThumb {
+  height: 150px;
+  margin-right: 30px;
+  border: 3px solid #262687;
+}
+
+.lightbox {
+  background-color: black;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.lightbox .closeLB {
+  color: white;
+}
+
+.lightbox .fullImg .slide img {
+  height: 500px;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #262687;
+  background: -webkit-gradient(linear, left top, right top, from(#262687), to(#fa82aa));
+  background: linear-gradient(90deg, #262687 0%, #fa82aa 100%);
+  padding: 20px 0px;
+  margin-top: 30px;
+}
+
+footer .footerLogo {
+  margin: 0 auto;
+}
+
+footer #footerLogo {
+  width: 80px;
+  margin: 0 auto;
+}
+
+#socialMedia {
+  margin: 0 auto;
+}
+
+#socialMedia ul {
+  list-style-type: none;
+}
+
+#socialMedia ul li {
+  display: inline-block;
+  background-color: white;
+  border-radius: 6px;
+  padding-top: 3px;
+}
+
+#socialMedia ul li img {
+  width: 40px;
+}
+
+#backtoTop {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 5px 10px;
+  color: #262687;
+  background-color: white;
+  text-decoration: none;
+  font-family: 'Mohave Bold';
+  font-size: 1.3em;
+  border-radius: 6px;
+}
+/*# sourceMappingURL=master.css.map */

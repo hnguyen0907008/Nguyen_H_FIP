@@ -1,0 +1,37 @@
+.workDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    @media only screen and (min-width: 780px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    .work{
+        width: 360px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border: 3px solid white;
+        padding: 20px;
+        @include roundCorners(20px);
+
+        //content
+        h3{
+            font-family: 'Raleway Bold';
+            font-size: 1.5em;
+            margin: 15px 0px 10px;
+        }
+        h4{
+            font-family: 'Mohave Light';
+            margin-top: 15px;
+        }
+    }
+
+
+    .work:hover{
+        border: 3px solid $pink;
+        h3,h4 {color: $pink;}
+    }
+}
