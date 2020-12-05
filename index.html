@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hien's Portfolio</title>
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/master.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
-	<main>
+	<main id="app">
         <header id="header">
 			<h2 class="hidden">Navigation</h2>
             <nav id="mainNav">
@@ -23,70 +24,27 @@
 		</header>
 		
 		<section class="hello">
-			<h2>HELLO WORLD</h2>
-			<p id="summary">I work on digital storytelling to<br> help companies solve problems<br> and building up brand awareness</p>
+			<img src="images/background.jpg" alt="Background">
 		</section>
 
 		<section class="recentWork" id="recentWork">
 			<h2>LATEST PROJECTS</h2>
-			<div class="workDiv">
-				<div class="work">
-					<img src="images/feat_housecom.jpg" alt="recent work">
-					<h3>HOUSECOM THERMOSTAT</h3>
-					<p>HouseCom™ ThermoSecurity™ System is a fully digital, hardwired and wireless enabled home personal and secure environment control system
-						In this project, I developed the brand look and marketing strategies to promote the products.</p>
-					<h4>BRANDING | 3D MODELING</h4>
-				</div>
-
-				<div class="work">
-					<a href="nutrilite.html"><img src="images/feat_nutrilite.jpg" alt="recent work"></a>
-					<h3>NUTRILITE</h3>
-					<p>Designing brochure for Nutrilite™ sale team to inform the importance of taking vitamins to improve immunity system.</p>
-					<h4>MARKETING</h4>
-				</div>
-
-				<div class="work">
-					<img src="images/feat_eco.jpg" alt="recent work">
-					<h3>ECO CULINARIUS</h3>
-					<P>Eco Culinarius is a healthy fast vegeterian food restaurant providing high-quality, fresh and healthy food for your health. In this project, we developed the brand look and an app for online shipping.</P>
-					<h4>BRANDING | USER INTERACTION</h4>
-				</div>
-
-				<div class="work">
-					<img src="images/feat_traa.jpg" alt="recent work">
-					<h3>THAMES RIVER ANGLER ASSOCIATION</h3>
-					<P>Improve the current look of the website, helping the TRAA reaching out to wider audiences.</P>
-					<h4>BRANDING | USER INTERACTION</h4>
-				</div>
-
-				<div class="work">
-					<img src="#" alt="recent work">
-					<h3>DEMO REEL</h3>
-					<P>Showcase of my motion graphic projects.</P>
-					<h4>MOTION DESIGN</h4>
-				</div>
-				<div class="work">
-					<img src="images/feat_imp.jpg" alt="recent work">
-					<h3>IMPRESSIONISM</h3>
-					<p>A small project I did to practice and satisfy my imagination: visualize an art movement as a website for education.</p>
-					<h4>VISUAL CONCEPT</h4>
-				</div>
-			</div><!--End workDiv-->
+			<pj-card v-for="pj in portfolio" :pj="pj" key="pj.id"></pj-card>
 		</section>
 
 		<footer>
-			<div class="footerLogo">
-                <a href="index.html"><img src="images/logo_white.png" alt="logo" id="footerLogo"></a>
-            </div>
-			<nav id="socialMedia">
-				<ul>
-					<li><a href="#"><img src="images/facebook.png" alt="media icon"></a></li>
-					<li><a href="#"><img src="images/instagram.png" alt="media icon"></a></li>
-					<li><a href="#"><img src="images/behance.png" alt="media icon"></a></li>
-					<li><a href="#"><img src="images/gmail.png" alt="media icon"></a></li>
-				</ul>
-			</nav>
-			<a href="#header" id="backtoTop">back to top</a>
+			<div class="footer">
+				<h3>THANK YOU FOR SCROLLING</h3>
+				<p>I look forward to new challenges and <br>collaborations. If you like what you saw, <br>let's have a chat.</p>
+				<div class="socialMedia">
+					<div id="icons">
+						<img src="images/behance.png" alt="Social Media Icon">
+						<img src="images/facebook.png" alt="Social Media Icon">
+						<img src="images/gmail.png" alt="Social Media Icon">
+						<img src="images/instagram.png" alt="Social Media Icon">
+					</div>
+				</div>
+			</div>
 		</footer>
 	</main>
 	<script type="module" src="js/main.js"></script>

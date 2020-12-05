@@ -1,38 +1,31 @@
+import {fetchData} from "./components/TheDataMiner.js";
+import Project from "./components/Projects.js";
+
 (() => {
-    console.log('fired!');
+    let vue_vm = new Vue({
+        // link Vue to an element in our HTML
+        //el: "#app"
+        data: {
+        portfolio: []
+        },
 
-    let lightBox = document.querySelector(".lightbox"),
-        closeLB = lightBox.querySelector("span"),
-        thumbnail = document.querySelectorAll(".imgThumb");
-        //arrows here
+        mounted: function() {
+            console.log("Vue is mounted!");
+            fetchData("./includes/index.php")
+                .then(data => {
+                    data.forEach(pj => this.portfolio.push(pj));
+                })
+                .catch(err => console.error(err)); 
+        },
 
-    //GALLERY FUNCTION
-    function showLightbox() {
-        lightBox.style.display = 'block';
-    }
-        
-    function hideLightbox() {
-        lightBox.style.display = 'none';
-    }
+        updated: function() {
+            console.log('Vue just updated the DOM');
+        },
 
-    function changeImg(){
-        debugger;
-        //change images
-    }
+        components: {
+            "pj-card": Project
+        }
 
-    thumbnail.forEach(thumb => thumb.addEventListener("click", showLightbox));
-    closeLB.addEventListener("click", hideLightbox);
-
-    //CONTACT PAGE DATA
-    fetch('./data/contactData.json')
-        .then(res => res.json())
-        .then(data => {
-            debugger;
-            console.log(data);
-        //handle data in Contact Page
-        })
-        .catch((err) => {
-            console.log("Sorry! Something is wrong");
-
-        })
+    }).$mount("#app"); // also connects Vue to your wrapper in HTML
+    
 })();

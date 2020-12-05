@@ -1,65 +1,81 @@
-.aboutMe{
+.aboutPage{
     display: flex;
     flex-direction: column;
-    color: $blue;
-    .portrait{
-	    margin: 0 auto;
-	    border-radius: 50%;
-	    margin-bottom: 30px;
+    margin: 0px 40px;
+    margin: 0 auto;
+    width: 100%;
+    @include tablet{
+        width: 65%;
     }
-    p {
-        font-family: 'Raleway Bold';
-	    font-size: 2em;
+    h2{
+        padding: 30px;
+        background-color: $pink;
+        font-family: $main-title;
+        color: white;
         text-align: center;
-        margin: 0px 40px;
-        line-height: 35px;
-    }
-    @media only screen and (min-width: 780px) {
-        width: 50%; padding-top: 20px;
-        p{
-            width: 90%
-        }
-    }
-}
-
-.aboutInfo {
-    border:  2px solid $pink;
-    padding: 30px; 
-    margin: 20px 40px 0px 40px;
-    .tools
-    {   
-	    display: flex; flex-direction: column;
-        text-align: center; margin-bottom: 20px;
-        .toolName{
-            font-family: 'Mohave Bold';
-	        font-size: 1.2em; color: #262687;
-        }
-    }
-    .divider
-    {
-        width: 100px;
-        height: 5px;
-        background-color: #FA82AA;
+        font-size: 2em;
+        line-height: 29px;
         margin: 0 auto;
-        margin-bottom: 20px;
-    }
-    .resume{
-        font-family: 'Mohave Bold';
-        font-size: 1.2em; color: #262687;
-        text-align: center;
-        #resumeLink{
-            font-size: 16px; font-family: 'Raleway Bold'; 
-            color: #FA82AA;
-        }
-        #resumeLink:hover {color:$blue;}
-        #resumeLink:active {color: blue;}
+        width: 93%;
     }
 
-    .note{
-        text-align: center;
-        margin-top: 20px;
+    .intro{
+        p{
+            padding: 30px;
+        }
     }
-    @media only screen and (min-width: 780px) {
-        width: 50%;
+
+    .skillset{
+        background-color: $lightpink;
+        @include roundCorners(10px);
+        margin: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-family: $main-title;
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 30px;
+            color: $blue;
+        }
+
+        .skillDiv{
+            margin: 0 auto;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .skill{
+                text-align: center;
+                margin-bottom: 30px;
+    
+                h4{
+                    font-family: $sec-font;
+                    font-size: 1.3em;
+                    color: $pink;
+                    margin-bottom: 10px;
+                }
+                ul{
+                    li{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .process{
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 }
