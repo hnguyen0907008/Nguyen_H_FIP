@@ -1,6 +1,7 @@
 # Nguyen_H_FIP
 
-Midterm FIP project which shows the basic ideas of my portfolio
+The Portfolio website that display my projects - year, team, tools, objective and how I approach the problem.
+Built using HTML5, [Vue](https://vuejs.org/), AJAX and Sass.
 
 ## Team
 
@@ -10,7 +11,12 @@ Solo
 
 Node, Sass
 
+## Usage
+
+Clone the project, <code>cd</code> to your directory/download, and run the app using MAMP/WAMP.
+
 ## Contributing
+
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
@@ -18,4 +24,5 @@ Node, Sass
 5. Submit a pull request :D
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
